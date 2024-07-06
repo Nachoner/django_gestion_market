@@ -1,0 +1,67 @@
+body {
+    background-color: ivory;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+
+.alert-message {
+    color: red;
+}
+
+#indicadores {
+    margin-top: 12px;
+}
+
+.card {
+    max-width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+   
+.carousel-item img {
+    width: 1px;
+    max-height: 555px;
+}
+
+.alert.mensaje {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 15px;   
+
+}

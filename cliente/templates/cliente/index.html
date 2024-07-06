@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Alimentos - Inicio</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tienda de Alimentos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- CODIGO PARA CONSUMIR LA API -->
+<div class="container mt-4">
+    <h1 class="text-center">Dolar y UF observado</h1>
+    <div id="indicadores" class="row justify-content-center"></div>
+</div>
+
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/verduras.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/Tipos-de-pan.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="img/frutas.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- Contenido de Inicio -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/verduras.3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Vegetales</h4>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/carnes.jpg" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Carne</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="img/frutos-secosd.webp" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Frutos Secos</h5>
+                        <a href="#" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal de inicio de sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Registrarse</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="firstName">Nombre</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Ingrese su nombre" required>
+                        <span class="invalid-feedback" style="display: none;">Por favor, solo ingresar letras.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Ingrese su apellido" required>
+                        <span class="invalid-feedback" style="display: none;">Por favor, solo ingresar letras.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Número de Teléfono</label>
+                        <input type="tel" class="form-control" id="phoneNumber" placeholder="Ingrese su número de teléfono" required>
+                        <span class="invalid-feedback" style="display: none;">Por favor, solo ingresar numeros</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                        <span class="invalid-feedback" style="display: none;">Por favor, ingrese un correo electrónico válido.</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Edad</label>
+                        <input type="number" class="form-control" id="age" placeholder="Ingrese su edad" min="18" required>
+                        <span class="invalid-feedback" style="display: none;">Por favor, ingrese una edad válida (mayor o igual a 18).</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Valida formulario con JavaScript -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Obtener referencia al formulario y a los campos
+        var registerForm = document.getElementById("registerForm");
+        var firstNameInput = document.getElementById("firstName");
+        var lastNameInput = document.getElementById("lastName");
+        var phoneNumberInput = document.getElementById("phoneNumber");
+        var emailInput = document.getElementById("email");
+        var ageInput = document.getElementById("age");
+
+        // Obtener referencia a los mensajes de error
+        var firstNameError = document.querySelector("#firstName + .invalid-feedback");
+        var lastNameError = document.querySelector("#lastName + .invalid-feedback");
+        var phoneNumberError = document.querySelector("#phoneNumber + .invalid-feedback");
+        var emailError = document.querySelector("#email + .invalid-feedback");
+        var ageError = document.querySelector("#age + .invalid-feedback");
+
+        // Función para validar solo letras en el nombre y apellido
+        function validateNameInput(input, errorElement) {
+            var regex = /^[a-zA-Z\s]*$/; // Solo letras y espacios permitidos
+            if (!regex.test(input)) {
+                errorElement.style.display = "block";
+                return false;
+            } else {
+                errorElement.style.display = "none";
+                return true;
+            }
+        }
+
+        // Función para validar solo números en el número de teléfono
+        function validatePhoneNumberInput(input, errorElement) {
+            var regex = /^\d+$/; // Solo números permitidos
+            if (!regex.test(input)) {
+                errorElement.style.display = "block";
+                return false;
+            } else {
+                errorElement.style.display = "none";
+                return true;
+            }
+        }
+
+        // Función para validar el correo electrónico
+        function validateEmailInput(input, errorElement) {
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Formato de correo electrónico válido
+            if (!regex.test(input)) {
+                errorElement.style.display = "block";
+                return false;
+            } else {
+                errorElement.style.display = "none";
+                return true;
+            }
+        }
+
+        // Función para validar la edad
+        function validateAgeInput(input, errorElement) {
+            // Edad debe ser un número mayor o igual a 18
+            if (isNaN(input) || parseInt(input) < 18) {
+                errorElement.style.display = "block";
+                return false;
+            } else {
+                errorElement.style.display = "none";
+                return true;
+            }
+        }
+
+        // Función de validación general para el formulario
+        function validateForm() {
+            var isValid = true;
+
+            // Validar nombre
+            isValid = validateNameInput(firstNameInput.value, firstNameError) && isValid;
+
+            // Validar apellido
+            isValid = validateNameInput(lastNameInput.value, lastNameError) && isValid;
+
+            // Validar número de teléfono
+            isValid = validatePhoneNumberInput(phoneNumberInput.value, phoneNumberError) && isValid;
+
+            // Validar correo electrónico
+            isValid = validateEmailInput(emailInput.value, emailError) && isValid;
+
+            // Validar edad
+            isValid = validateAgeInput(ageInput.value, ageError) && isValid;
+
+            return isValid;
+        }
+
+        // Agregar evento de escucha para el envío del formulario
+        registerForm.addEventListener("submit", function(event) {
+            // Validar el formulario antes de enviar
+            if (!validateForm()) {
+                // Evitar el envío del formulario si no es válido
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Validations.js"></script>
+    <script src="api.js"></script>
+</body>
+</html>

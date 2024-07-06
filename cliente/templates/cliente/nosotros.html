@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Alimentos - Nosotros</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Tienda de Alimentos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">Carrito</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una tienda de alimentos comprometida con la calidad y frescura de nuestros productos. Desde 1995, hemos estado sirviendo a nuestra comunidad con los mejores productos frescos y orgánicos disponibles.</p>
+        <p>Nuestra misión es proporcionar a nuestros clientes una experiencia de compra única y satisfactoria, ofreciendo una amplia variedad de alimentos saludables y deliciosos a precios asequibles.</p>
+        <p>En nuestra tienda, nos esforzamos por apoyar a los agricultores locales y promover prácticas agrícolas sostenibles. Creemos en la importancia de conocer el origen de nuestros alimentos y en construir relaciones sólidas con nuestros proveedores.</p>
+    </div>
+
+    <!-- Modal de inicio de sesión -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
